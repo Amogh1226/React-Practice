@@ -1,0 +1,51 @@
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+<script>
+var person = {
+  firstname:"Amogh",
+  lastname:"Jonnalagadda",
+  age:9,
+  eyecolor:"blue"
+};
+
+document.getElementById("demo").innerHTML = person.firstname + " is " + person.age + " years old.";
+var person = {
+  firstname:"Amogh",
+  lastname:"Jonnalagadda",
+  age:9,
+  eyecolor:"blue"
+};
+
+document.getElementById("demo1").innerHTML = person["firstname"] + " is " + person["age"] + " years old.";
+var txt = "";
+var person = {fname:"Amogh", lname:"Jonnalagadda", age:9}; 
+var x;
+for (x in person) {
+  txt += person[x] + " ";
+}
+document.getElementById("demo2").innerHTML = txt;
+var person = {
+  firstname:"Amogh",
+  lastname:"Jonnalagadda",
+  age:9,
+  eyecolor:"blue"
+};
+
+person.nationality = "English";
+document.getElementById("demo3").innerHTML =
+person.firstname + " is " + person.nationality + ".";
+var person = {
+  firstname:"Amogh",
+  lastname:"Jonnalagadda",
+  age:9,
+  eyecolor:"blue"
+};
+
+delete person.age;
+document.getElementById("demo4").innerHTML =
+person.firstname + " is " + person.age + " years old.";
+</script>
